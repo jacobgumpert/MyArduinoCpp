@@ -5,7 +5,8 @@
 
 ### PROJECT_DIR
 ### This is the path to where you have created/cloned your project
-PROJECT_DIR       = /home/{{ YOUR USERNAME }}/MyArduinoProject
+# PROJECT_DIR       = /home/{{ YOUR USERNAME }}/MyArduinoProject
+PROJECT_DIR       = /home/jacob/workspace/ArduinoCppProject
 
 ### AVR_GCC_VERSION
 ### Check if the version is equal or higher than 4.9
@@ -26,16 +27,16 @@ USER_LIB_PATH     :=  $(realpath $(PROJECT_DIR)/lib)
 ### BOARD_TAG & BOARD_SUB
 ### For Arduino IDE 1.0.x
 ### Only BOARD_TAG is needed. It must be set to the board you are currently using. (i.e uno, mega2560, etc.)
-# BOARD_TAG         = mega2560
+BOARD_TAG         = uno
 ### For Arduino IDE 1.6.x
 ### Both BOARD_TAG and BOARD_SUB are needed. They must be set to the board you are currently using. (i.e BOARD_TAG = uno, mega, etc. & BOARD_SUB = atmega2560, etc.)
 ### Note: for the Arduino Uno, only BOARD_TAG is mandatory and BOARD_SUB can be equal to anything
-BOARD_TAG         = mega
-BOARD_SUB         = atmega2560
+# BOARD_TAG         = mega
+# BOARD_SUB         = atmega2560
 
 ### MONITOR_BAUDRATE
 ### It must be set to Serial baudrate value you are using.
-MONITOR_BAUDRATE  = 115200
+MONITOR_BAUDRATE  = 9600
 
 ### AVR_TOOLS_DIR
 ### Path to the AVR tools directory such as avr-gcc, avr-g++, etc.
@@ -62,7 +63,7 @@ endif
 
 ### MONITOR_PORT
 ### The port your board is connected to. Using an '*' tries all the ports and finds the right one.
-MONITOR_PORT      = /dev/tty.usbmodem*
+MONITOR_PORT      = /dev/ttyACM*
 
 ### don't touch this
 CURRENT_DIR       = $(shell basename $(CURDIR))
